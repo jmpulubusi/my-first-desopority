@@ -1,0 +1,180 @@
+@import"./fonts";
+@import"./colors";
+@import"./screens";
+@mixin title{
+    font-family: 'ANT-bold';
+    font-size: 1.5em;
+}
+
+body{
+    padding: 0%;
+    font-family: 'ANT-regular';
+    margin: 0%;
+    color: $paragraphText;
+    background-color: $siteBackground;
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+.nav {
+    background-color: $paragraphText;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__logo{
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }&__list{
+        display: flex;
+        width: 100%;
+        height: 100%; 
+    }&__item{
+        display: flex;
+        width: 100%;
+        position: relative;
+        a{
+            text-decoration: none;
+            color: $siteBackground;
+            position: relative;
+            margin-top: 0%;
+            bottom: 5px;
+            margin-bottom: 3%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            font-size: 1rem;
+        }a:hover{
+            color: $siteBackground;
+        }a::before{
+            content: '';
+            display: block;
+            background-color: $siteBackground;
+            height: 5px;
+            width: 0px;
+            position: absolute;
+            bottom: -13px;
+        }a:hover::before{
+            width: 165px;
+        }
+    }
+
+}
+.hero{
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../assests/bandsite2.jpg);
+    margin-top: 0%;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    &__overlay{
+        background-color: rgba($color: $paragraphText, $alpha: 0.5);
+        height: 40vh;
+        width: 100%;
+        position: absolute;
+    }&__title{
+        position: relative;
+        font-family: 'ANT-bold';
+        font-size: 1.55em;
+        width: 80%;
+        margin: 0% 0% 0% 5%;
+        color: $siteBackground;
+        line-height: 35px;
+    }
+}
+
+.about{
+    background-color: $siteBackground;
+    margin: 10% 5% 7.5% 5%;
+&__title{
+    @include title();
+    color: $paragraphText;
+    }&__img{
+        width: 100%;
+        position: relative;
+        margin-bottom: 7.5%;
+        }&__quote{
+            margin: 0%;
+            font-size: 1em;
+            font-family: 'ANT-demi';
+        }&__name{
+            margin:10% 0% 10% 0%;
+            color: $paragraphText;
+            font-size: 1em;
+        }
+}
+.bio{
+    margin: 0% 5% 7.5% 5%;
+    &__title{
+        font-size: 1em;
+        font-family: 'ANT-demi';
+    }&__text{
+        font-family: 'ANT-light';
+        font-size: .9em;
+    }
+}
+.gallery{
+    background-color: $galleryBackground;
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    &__title{
+        margin: 2.5% 5% -3.5% 5%;
+        font-family: 'ANT-bold';
+        font-size: 1em;
+        display: flex;
+    }&__img{
+        width: 90%;
+        margin: 2% 5% 2% 5%
+    }  
+}
+.footer{
+    background-color: $paragraphText;
+    color: $siteBackground;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+&__social{
+    margin: 5% 6% 0% 5%;
+    @include title;
+    }
+    &__img{
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+        margin-bottom: 5%;
+        margin-left:2%;
+    }
+    &__text{
+        margin: 0% 5%;
+        line-height: 0%;
+        align-content: flex-start;
+    }&__rep{
+        line-height: 0%;
+        margin-top: 10%;
+        margin-bottom: 15%;
+        font-size: 1em;    
+    }&__info{
+        font-family: 'ANT-thin';
+        line-height: 0%;
+        margin-bottom: 10%;
+    }&__email{
+        font-family: 'ANT-thin';
+        margin-top: 10%;
+    }&__copyright{
+        margin: 5%;
+        font-family: 'ANT-thin';
+        width: 50%;
+        line-height: 20px;
+    }&__logo{
+        display: none;
+    }
+}
+@include tablet;
+@include laptop;

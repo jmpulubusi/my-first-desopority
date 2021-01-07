@@ -1,0 +1,205 @@
+@mixin tablet {
+@media screen and (min-width:768px){
+    body{
+        font-size: 1.5rem;
+        margin: 0%;
+        padding: 0%
+    }
+    .nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__logo{
+            margin-left: 4%;
+            margin-top: 3%;
+        }&__list{
+            margin-top: 65px;
+        }&__item{
+            display: flex;
+            width: 30%;
+            justify-content: space-evenly;
+            left: 5%;
+        a{
+            font-size: .8rem;
+            bottom: 0px;
+        }
+        a::before{
+            top: 40px;
+            }
+        }a:hover::before{
+            width: 85px;
+         }
+    }
+    .hero{
+        height: 50vh;
+    &__overlay{
+        height: 50vh;
+    }&__title{
+        font-size: 2em;
+        line-height: 70px;
+    }
+}
+    .about{
+        margin-top: 5%;
+&__name{
+    font-size: .7em;
+    margin: 5% 0%;
+
+    }
+}
+    .bio__text{
+        display: flex;
+    &-block1{
+        font-size: .8em;
+        line-height: 20px;
+    }&-block2{
+        padding-left: 5%;
+        font-size: .8em;
+        line-height: 20px;
+    }
+}
+    .gallery{
+        margin-top: 0%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 0%;
+
+    &__title{
+        display: flex;
+        margin-bottom: 3%;
+        position: relative;
+        right: 3%;
+        height: 100%;
+        }
+   
+    &__img{
+        width: 30%;
+        padding: 0%;
+        margin: 0% 0% 1% 2%
+        }
+    }.footer{
+        font-size: .75em;
+        margin-top: 3%;
+        margin-bottom: 0%;
+        &__social{
+            display: flex;
+            margin-top: 0%;
+        }&__img{
+            justify-content: space-evenly;
+            width: 25%;
+            height: 100%;
+            position: relative;
+            margin-top: 7%   
+        }&__info{
+            margin-bottom: 0%;
+        }&__textBlock{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+        }&__text{
+            font-size: .85rem;
+        }&__email{
+            margin-top:20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }&__copyright{
+            font-size: .85rem;
+            margin-bottom: 5%;
+            margin-top: 0%;
+        }&__logo{
+            position: relative;
+            margin-top: 7%;
+            display: flex;
+            left: 20%;
+        }
+    }#footer__email{
+        margin-top: 27%;
+    }
+}
+}
+@mixin laptop{
+@media screen and (min-width:1200px){
+    .nav__logo{
+        margin-left: 15%;
+    }
+    .hero{
+        height: 65vh;
+    &__overlay{
+        height: 65vh;
+        }&__title{
+            margin-left: 14%;
+            font-size: 2.5em;
+        }
+    }
+    .about{
+        margin: 0%;
+    &__title{
+        margin-left: 15%;
+        font-size: 1.25em;
+        }&__img{
+           width: 60%;
+           justify-content: center;
+           margin-left: 20%;
+           margin-bottom: 2%;
+           height: 450px;
+        }&__quote{
+            font-size: .9em;
+            margin-left: 20%;
+            width: 60%;
+            margin-top: 0%;
+        }&__name{
+            margin-left: 20%;
+            margin-top: 3%;
+            margin-bottom: 0%;
+            font-size: 1em;
+        }
+    }.bio{
+        margin-left: 20%;
+        margin-top: 3%;
+    &__title{
+        font-size: 1.1em;
+        }&__text-block1{
+            font-size: .9em;
+            line-height: 27px;;
+        }&__text-block2{
+            font-size: .9em;
+            line-height: 27px;
+        }
+    }
+    .gallery{
+        margin: 0%;
+    &__title{
+        margin-left: 15%;
+        }&__section{
+            margin-left: 10%;
+            width: 80%;
+            margin-bottom: 2%;
+        }
+    }
+    .footer{
+        margin: 0%;
+    &__social{
+        margin-left: 12%;
+        }&__img{
+           margin-top: 4.5%; 
+        }&__logo{
+            margin-top: 4%;
+            margin-left: 15%;
+        }&__textBlock{
+            width: 65%;
+            margin-left:8%;
+        }&__copyright{
+            width: 22.75%;
+            margin-left: 11.4%;
+            }
+        }
+    }
+}
+
+
+       
+        
